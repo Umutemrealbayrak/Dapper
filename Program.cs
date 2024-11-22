@@ -1,9 +1,11 @@
 using RealEstateDapper.Models.DapperContext;
 using RealEstateDapper.Repositories.CategoryRepository;
+using RealEstateDapper.Repositories.ProductRepository;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddTransient<Context>();
 builder.Services.AddTransient<ICategoryRepository,CategoryRepository>();
+builder.Services.AddTransient<IProductRepository, ProductRepository>();
 // Add services to the container.
 
 builder.Services.AddControllers();
